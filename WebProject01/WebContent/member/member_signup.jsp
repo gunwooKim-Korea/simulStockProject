@@ -34,24 +34,24 @@ footer {
 </style>
 </head>
 <body>
-<form action="WebProject01/signup.do?id">
+<form action="/WebProject01/member.do" method="post">
   <div class="form-group col-sm-4 col-sm-offset-4">
-    <label for="exampleInputEmail1">ID</label>
-    <input type="email" class="form-control" id="email" placeholder="Email">
+    <label for="exampleInputid1">ID</label>
+    <input type="text" class="form-control" name="mem_id" placeholder="Email">
   </div>
   <div class="form-group col-sm-4 col-sm-offset-4">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="pass" placeholder="Password">
+    <input type="password" class="form-control" name="pass" placeholder="Password">
   </div>
   <div class="form-group col-sm-4 col-sm-offset-4">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="email" placeholder="Email">
+    <input type="email" class="form-control" name="email" placeholder="Email">
   </div>
   <div class="form-group col-sm-4 col-sm-offset-4">
     <label for="exampleInputEmail1">Point</label>
-    <input type="text" class="form-control" id="point" placeholder="Email">
+    <input type="text" class="form-control" name="point" placeholder="Email">
   </div>
-  <button type="submit" class="btn btn-default col-sm-4 col-sm-offset-4">Submit</button>
+  <input type="submit" class="btn btn-default col-sm-4 col-sm-offset-4" value="Submit">
 </form>
 </body>
 </html>

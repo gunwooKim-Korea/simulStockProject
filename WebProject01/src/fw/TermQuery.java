@@ -10,6 +10,7 @@ public class TermQuery {
 	
 	public static String TERM_MEAN
 	 ="select term_name,term_mean from term  where term_id = ?";
+
 }
 
 
