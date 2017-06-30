@@ -23,7 +23,7 @@
 		<a href="/WebProject01/stock.do?state=kospi" class="list-group-item">코스피</a> 
 		<a href="/WebProject01/stock.do?state=kosdaq" class="list-group-item">코스닥</a> 
 		<a href="kospi.do" class="list-group-item">관심종목</a> 
-		<a href="/WebProject01/view.do?viewpath=parent_stock_kospi.jsp&leftpath=stock_menu.jsp" class="list-group-item">투자현황</a>
+		
 
 
 

@@ -28,8 +28,7 @@
 
 			$("." + Stock_name).css("display", "block");
 			$("#pre" + Stock_name).html("투자하세요");
-			$("." + Stock_name).css("colspan", "9");
-		
+
 		});
 	});
 	$(document).ready(function() {
@@ -42,7 +41,7 @@
 	$(document).ready(function() {
 		$(".title").on("click", function() {
 
-			alert("마우스")
+			searchAddress();
 
 		});
 	});
@@ -51,8 +50,11 @@
 		Stock_name = str;
 	}
 
-	function alert1() {
-		alert("투자성공")
+	function searchAddress() {
+
+		//alert(id)
+		myopen = window.open("/WebProject01/stock/popup.jsp?Stock_name="
+				+ Stock_name, "mywin", "width=400,height=200");
 
 	}
 </script>
@@ -75,7 +77,7 @@
 			<table class="table table-bordered">
 
 				<tr>
-					<th></th>
+					<th>/</th>
 					<th>종목명</th>
 					<th>현재가</th>
 					<th>전일비</th>
@@ -106,13 +108,12 @@
 					<td><%=dept.getSell_fav_price()%></td>
 					<td><%=dept.getSum_price()%></td>
 				</tr>
+				
+				<tr style="display: none;"
+					width: 2000px; class="<%=dept.getStock_name()%>">
+					
+					<td><span id="pre<%=dept.getStock_name()%>"></span></td>
 
-				<tr>
-					<td style="diplay: none;" class="<%=dept.getStock_name()%>"
-						>
-
-						<div  id="pre<%=dept.getStock_name()%>"></div>
-					</td>
 				</tr>
 
 				<%
