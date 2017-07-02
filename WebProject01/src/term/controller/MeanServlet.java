@@ -22,6 +22,8 @@ public class MeanServlet extends HttpServlet {
 
 		String termId = req.getParameter("termId");
 		
+	//	System.out.println(termId+"이겅");
+		
 		TermService service = new TermServiceImpl();
 		MeanDTO mean = service.getTermMean(termId);
 
@@ -30,7 +32,7 @@ public class MeanServlet extends HttpServlet {
 		//req.setAttribute("term_mean", mean.getTerm_mean());
 		req.setAttribute("meandto", mean);
 		
-		System.out.println(mean.getTerm_name()+" : "+mean.getTerm_mean());
+	//	System.out.println(mean.getTerm_name()+" : "+mean.getTerm_mean());
 		
 		// 요청재지정
 		RequestDispatcher rd = req

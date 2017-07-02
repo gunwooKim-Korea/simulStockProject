@@ -20,7 +20,7 @@ public class MemberDAOImpl implements MemberDAO {
 		MemberDTO member = null;
 		
 		try {
-			con = DBUtil.getConnection();
+			con = getConnection();
 			ptmt = con.prepareStatement(sql);
 			
 			ptmt.setString(1, id);
@@ -38,7 +38,7 @@ public class MemberDAOImpl implements MemberDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally{
-			DBUtil.close(rs, ptmt, con);
+			close(rs, ptmt, con);
 		}
 		return member;
 	}

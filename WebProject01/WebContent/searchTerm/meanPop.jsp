@@ -9,10 +9,10 @@
 <title>Insert title here</title>
 
 	
-	<%/*
-			document.getElementById("meandiv").innerHTML = term_mean;
-			alert(term_mean);
-	*/%>
+	<%
+		/*	document.getElementById("meandiv").innerHTML = term_mean;
+			alert(term_mean);*/
+	%>
 	
 
 </head>
