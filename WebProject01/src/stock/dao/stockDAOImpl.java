@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import static stock.fw.stockQuery.*;
-import stock.dto.stockDTO;
-import stock.fw.*;
+import static stockfw.stockQuery.*;
+import stockDTO.stockDTO;
+import stockfw.*;
 
 public class stockDAOImpl implements stockDAO {
 
@@ -32,13 +32,13 @@ public class stockDAOImpl implements stockDAO {
 						rs.getString(4) ,rs.getString(5) ,
 						rs.getString(6) ,rs.getString(7) ,
 						rs.getString(8));
-				System.out.println("½ºÅ¹ "+stock);
+				
 				
 				list.add(stock);
 				
 			}
 			
-			System.out.println("dao" + list.size());
+			
 		} catch (SQLException e) {
 
 			e.printStackTrace();

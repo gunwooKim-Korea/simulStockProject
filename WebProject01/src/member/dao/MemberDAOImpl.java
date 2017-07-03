@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import fw.DBUtil;
 import member.dto.MemberDTO;
 import static fw.DBUtil.*;
 import static fw.MemberQuery.*;

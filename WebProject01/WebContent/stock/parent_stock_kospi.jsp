@@ -24,7 +24,29 @@
 	<div>
 		<table class="table table-bordered">
 
+<<<<<<< HEAD
 		
+=======
+			<col width="4%">
+
+			<col width="7%">
+			<col width="7%">
+			<col width="7%">
+
+			<col width="9%">
+
+			<col width="9%">
+
+			<col width="9%">
+
+			<col width="9%">
+
+			<col width="9%">
+
+			<col width="9%">
+
+			<col width="9%">
+>>>>>>> refs/remotes/origin/songjang1
 			<tr>
 
 

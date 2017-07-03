@@ -1,4 +1,4 @@
-package fw;
+package stockfw;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,10 +21,10 @@ public class DBUtil {
 	public static Connection getConnection() {
 		// 실제로 커넥션을 만들어서 리턴하도록 구현
 		Connection con = null;
-		String url = "jdbc:oracle:thin:@192.168.9.46:1521:xe";
-		//String url = "jdbc:oracle:thin:@192.168.219.148:1521:xe";
-		String user = "pj2";
-		String password = "pj2";
+		String url = "jdbc:oracle:thin:@192.168.9.35:1521:xe";
+		
+		String user = "stock";
+		String password = "stock";
 		try {
 			con = DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {

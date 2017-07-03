@@ -2,7 +2,12 @@
     <wb-module deploy-name="WebProject01">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+<<<<<<< HEAD
         <property name="java-output-path" value="/WebProject01/build/classes"/>
         <property name="context-root" value="WebProject01"/>
+=======
+        <property name="context-root" value="WebProject01"/>
+        <property name="java-output-path" value="/WebProject01/build/classes"/>
+>>>>>>> refs/remotes/origin/songjang1
     </wb-module>
 </project-modules>

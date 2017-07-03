@@ -19,7 +19,11 @@
 	<br/>
 	<br/>
 	
+<<<<<<< HEAD
 	<form action="/WebProject01/termlist.do?word=''">
+=======
+	<form action="/WebProject01/termlist.do">
+>>>>>>> refs/remotes/origin/songjang1
 		<input type="text" name="search" class ="form-control">
 		</br>
 		</br>
