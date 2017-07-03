@@ -15,8 +15,7 @@
 <title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
@@ -25,27 +24,37 @@
 	var Stock_name;
 	$(document).ready(function() {
 		$(".title").on("mouseover", function() {
+
 			$("." + Stock_name).css("display", "block");
 			$("#pre" + Stock_name).html("투자하세요");
+
 		});
 	});
 	$(document).ready(function() {
 		$(".title").on("mouseout", function() {
+
 			$("." + Stock_name).css("display", "none");
+
 		});
 	});
 	$(document).ready(function() {
 		$(".title").on("click", function() {
+
 			searchAddress();
+
 		});
 	});
+
 	function idSet(str) {
 		Stock_name = str;
 	}
+
 	function searchAddress() {
-		//alert(id)
+
+	
 		myopen = window.open("/WebProject01/stock/popup.jsp?Stock_name="
-				+ Stock_name, "mywin", "width=400,height=200");
+				+ Stock_name, "mywin", "width=400,height=300");
+
 	}
 </script>
 
@@ -57,13 +66,25 @@
 				.getAttribute("stocklist");
 		int count = 0;
 	%>
-	<div class="container">
-
-		<h2><%=state%>종목
+	<div class="col-sm-8">
+	<h2><%=state%>종목</h2></div>
+	<div class="col-sm-2">
+	
+				
+   <div class="input-group" >
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+      </div>
+		
 		</h2>
 
 
-		<div class="col-sm-10">
+		<div>
 			<table class="table table-bordered">
 
 				<tr>
@@ -97,14 +118,16 @@
 					<td><%=dept.getBuy_fav_price()%></td>
 					<td><%=dept.getSell_fav_price()%></td>
 					<td><%=dept.getSum_price()%></td>
+					
+						<td style="display: none;"
+					 class="<%=dept.getStock_name()%>"><span id="pre<%=dept.getStock_name()%>"></span></td>
 				</tr>
 				
-				<tr style="display: none;"
-					width: 2000px; class="<%=dept.getStock_name()%>">
+				
 					
-					<td><span id="pre<%=dept.getStock_name()%>"></span></td>
+				
 
-				</tr>
+				
 
 				<%
 					}
