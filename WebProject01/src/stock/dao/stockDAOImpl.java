@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import stock.dto.stockDTO;
-import stock.fw.DBUtil;
+import fw.DBUtil;
 import static stock.fw.stockQuery.*;
 public class stockDAOImpl implements stockDAO {
 
