@@ -21,7 +21,7 @@
     <tbody>
       <tr>
         <td>John</td>
-        <td> <a href="/WebProject01/view.do?viewpath=../company/company_info.jsp&menupath=../company/company_menu.jsp">Doe</a></td>
+        <td> <a href="/WebProject01/view.do?viewpath=../company/company_info1.jsp&menupath=../company/company_menu.jsp">Doe</a></td>
        
       </tr>
      
