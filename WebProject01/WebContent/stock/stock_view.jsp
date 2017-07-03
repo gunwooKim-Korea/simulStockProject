@@ -1,4 +1,4 @@
-<%@page import="stockDTO.stockDTO"%>
+<%@page import="stock.dto.stockDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -25,37 +25,27 @@
 	var Stock_name;
 	$(document).ready(function() {
 		$(".title").on("mouseover", function() {
-
 			$("." + Stock_name).css("display", "block");
 			$("#pre" + Stock_name).html("투자하세요");
-
 		});
 	});
 	$(document).ready(function() {
 		$(".title").on("mouseout", function() {
-
 			$("." + Stock_name).css("display", "none");
-
 		});
 	});
 	$(document).ready(function() {
 		$(".title").on("click", function() {
-
 			searchAddress();
-
 		});
 	});
-
 	function idSet(str) {
 		Stock_name = str;
 	}
-
 	function searchAddress() {
-
 		//alert(id)
 		myopen = window.open("/WebProject01/stock/popup.jsp?Stock_name="
 				+ Stock_name, "mywin", "width=400,height=200");
-
 	}
 </script>
 

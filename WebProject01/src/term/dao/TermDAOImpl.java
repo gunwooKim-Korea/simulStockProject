@@ -25,20 +25,22 @@ public class TermDAOImpl implements TermDAO {
 		                    //                 넣어야 한다.
 		try {
 			con = getConnection();
-			if(search==null){	//목록조회
-				int a = ((page-1)*15)+1;
-				int b = (page*15);
+			int a = ((page-1)*15)+1;
+			int b = (page*15);
+			if(search==null || search==""){	//목록조회
 				ptmt = con.prepareStatement(TERM_SELECT);
 				ptmt.setInt(1, a);
 				ptmt.setInt(2, b);
 			}else{//search작업
 				ptmt = con.prepareStatement(TERM_SEARCH);
 				ptmt.setString(1, "%"+search+"%");
+				ptmt.setInt(2, a);
+				ptmt.setInt(3, b);
 			}
 			rs = ptmt.executeQuery();
 			
 			while(rs.next()){
-				term = new TermDTO(rs.getInt(1),rs.getString(2));
+				term = new TermDTO(rs.getInt(1),rs.getString(2),rs.getString(3));
 				termlist.add(term);
 			}
 			

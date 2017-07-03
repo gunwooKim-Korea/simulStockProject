@@ -7,12 +7,16 @@ public class MeanDTO {
 	public MeanDTO(){
 		
 	}
-	
-	public MeanDTO(String term_name, String term_mean) {
+
+	public MeanDTO( String term_name,
+			String term_mean) {
 		super();
-		this.term_mean = term_mean;
 		this.term_name = term_name;
+		this.term_mean = term_mean;
 	}
+
+
+
 
 	public String getTerm_name() {
 		return term_name;
@@ -29,6 +33,6 @@ public class MeanDTO {
 	public void setTerm_mean(String term_mean) {
 		this.term_mean = term_mean;
 	}
-
+	
 	
 }

@@ -1,8 +1,5 @@
 /apidata/
 /fw/
+/member/
 /stock/
-/stockController/
-/stockDTO/
-/stockService/
-/stockfw/
 /term/

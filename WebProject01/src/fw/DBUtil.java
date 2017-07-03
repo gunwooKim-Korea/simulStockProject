@@ -21,10 +21,11 @@ public class DBUtil {
 	public static Connection getConnection() {
 		// 실제로 커넥션을 만들어서 리턴하도록 구현
 		Connection con = null;
+		//String url = "jdbc:oracle:thin:@192.168.9.22:1521:xe";
 		String url = "jdbc:oracle:thin:@192.168.9.46:1521:xe";
-		//String url = "jdbc:oracle:thin:@192.168.219.148:1521:xe";
-		String user = "pj";
-		String password = "pj";
+		String user = "pj2";
+		String password = "pj2";
+		
 		try {
 			con = DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {

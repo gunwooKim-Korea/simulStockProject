@@ -47,8 +47,7 @@ footer {
 	<div class="container">
 
 		<div class="row content">
-		
-			<div class="col-sm-2">
+			<div class="col-sm-2 menupath">
 				<jsp:include page="${menupath}"></jsp:include>
 			</div> 
 			<div class="col-sm-9">

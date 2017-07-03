@@ -19,7 +19,7 @@
 	<br/>
 	<br/>
 	
-	<form action="/WebProject01/termlist.do">
+	<form action="/WebProject01/termlist.do?word=''">
 		<input type="text" name="search" class ="form-control">
 		</br>
 		</br>

@@ -18,7 +18,7 @@
 				<a class="navbar-brand" href="Home.jsp">Logo</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav">
 					<li class="active"><a href="Home.jsp">Home</a></li>
 					<li><a href="/WebProject01/stock.do?state=kospi">모의투자</a></li>
 					<li><a href="/WebProject01/view.do?viewpath=../company/company_main.jsp&menupath=../company/company_menu.jsp">기업정보</a></li>
