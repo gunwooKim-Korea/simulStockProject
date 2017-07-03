@@ -1,7 +1,7 @@
 package member.dao;
 
-import static fw.MemberQuery.MEMBER_INSERT;
-import static fw.MemberQuery.MEMBER_LOGIN;
+import static member.fw.MemberQuery.MEMBER_INSERT;
+import static member.fw.MemberQuery.MEMBER_LOGIN;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

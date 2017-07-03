@@ -1,4 +1,4 @@
-package fw;
+package member.fw;
 
 public class MemberQuery {
 	public static String MEMBER_LOGIN = 
