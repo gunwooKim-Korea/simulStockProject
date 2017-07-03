@@ -2,7 +2,7 @@ package term.dao;
 
 import static fw.DBUtil.close;
 import static fw.DBUtil.getConnection;
-import static fw.TermQuery.*;
+import static term.fw.TermQuery.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
