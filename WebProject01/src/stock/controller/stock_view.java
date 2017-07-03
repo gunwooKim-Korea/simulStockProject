@@ -1,4 +1,4 @@
-package stock.controller;
+package stockController;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,9 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import stock.dto.stockDTO;
-import stock.service.stockService;
-import stock.service.stockServiceImpl;
+import stock.DAO.stockDAOImpl;
+import stockDTO.stockDTO;
+import stockService.stockService;
+import stockService.stockServiceImpl;
 
 
 
