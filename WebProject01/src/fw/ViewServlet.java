@@ -18,9 +18,6 @@ public class ViewServlet extends HttpServlet {
 		String viewpath = request.getParameter("viewpath");
 		String menupath = request.getParameter("menupath");
 		
-		
-		
-		
 		request.setAttribute("viewpath", viewpath);
 		request.setAttribute("menupath", menupath);
 		

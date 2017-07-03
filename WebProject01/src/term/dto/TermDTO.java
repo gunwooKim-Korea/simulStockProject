@@ -1,7 +1,8 @@
 package term.dto;
 
 public class TermDTO {
-	int term_id;
+	int rownum;
+	String term_id;
 	String term_name;
 	//String term_mean;
 	
@@ -9,18 +10,28 @@ public class TermDTO {
 		
 	}
 	
-	public TermDTO(int term_id, String term_name) {
+	public TermDTO(int rownum, String term_id, String term_name) {
 		super();
+		this.rownum = rownum;
 		this.term_id = term_id;
 		this.term_name = term_name;
-		//this.term_mean = term_mean;
 	}
 
-	public int getTerm_id() {
+
+
+	public int getRownum() {
+		return rownum;
+	}
+
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
+	}
+
+	public String getTerm_id() {
 		return term_id;
 	}
 
-	public void setTerm_id(int term_id) {
+	public void setTerm_id(String term_id) {
 		this.term_id = term_id;
 	}
 
@@ -31,6 +42,5 @@ public class TermDTO {
 	public void setTerm_name(String term_name) {
 		this.term_name = term_name;
 	}
-
 	
 }
