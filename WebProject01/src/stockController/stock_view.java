@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import stock.DAO.stockDAOImpl;
 import stockDTO.stockDTO;
 import stockService.stockService;
 import stockService.stockServiceImpl;

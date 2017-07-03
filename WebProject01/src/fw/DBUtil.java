@@ -23,8 +23,8 @@ public class DBUtil {
 		Connection con = null;
 		String url = "jdbc:oracle:thin:@192.168.9.46:1521:xe";
 		//String url = "jdbc:oracle:thin:@192.168.219.148:1521:xe";
-		String user = "pj2";
-		String password = "pj2";
+		String user = "pj";
+		String password = "pj";
 		try {
 			con = DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {

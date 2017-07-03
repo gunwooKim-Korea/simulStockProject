@@ -23,11 +23,7 @@
 		<a href="/WebProject01/stock.do?state=kospi" class="list-group-item">코스피</a> 
 		<a href="/WebProject01/stock.do?state=kosdaq" class="list-group-item">코스닥</a> 
 		<a href="kospi.do" class="list-group-item">관심종목</a> 
-<<<<<<< HEAD
-		<a href="/WebProject01/view.do?viewpath=../stock/parent_stock_kospi.jsp&menupath=../stock/stock_menu.jsp" class="list-group-item">투자현황</a>
-=======
 		
->>>>>>> refs/remotes/origin/songjang1
 
 
 
