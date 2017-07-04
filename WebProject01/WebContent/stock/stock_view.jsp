@@ -51,9 +51,8 @@
 
 	function searchAddress() {
 
-	
-		myopen = window.open("/WebProject01/stock/popup.jsp?Stock_name="
-				+ Stock_name, "mywin", "width=400,height=300");
+		myopen = window.open("/WebProject01/company_info.do?Stock_name="
+				+ Stock_name, "mywin", "width=400,height=500");
 
 	}
 </script>
@@ -67,75 +66,77 @@
 		int count = 0;
 	%>
 	<div class="col-sm-8">
-	<h2><%=state%>종목</h2></div>
-	<div class="col-sm-2">
-	
-				
-   <div class="input-group" >
-        <input type="text" class="form-control" placeholder="Search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </div>
-      </div>
-      </div>
-		
+		<h2><%=state%>종목
 		</h2>
+	</div>
+	<div class="col-sm-2">
 
 
-		<div>
-			<table class="table table-bordered">
-
-				<tr>
-					<th>/</th>
-					<th>종목명</th>
-					<th>현재가</th>
-					<th>전일비</th>
-					<th>등락률</th>
-					<th>거래량</th>
-					<th>매수호가</th>
-					<th>매도호가</th>
-					<th>시가총액</th>
-
-
-				</tr>
-
-
-				<%
-					for (int i = 0; i < stocklist.size(); i++) {
-						stockDTO dept = stocklist.get(i);
-						count++;
-				%>
-
-				<tr class="title" onmouseover="idSet('<%=dept.getStock_name()%>')">
-					<td><%=count%></td>
-					<td><%=dept.getStock_name()%></td>
-					<td><%=dept.getCur_price()%></td>
-					<td><%=dept.getYesterday()%></td>
-					<td><%=dept.getChange_rate()%></td>
-					<td><%=dept.getTrade_val()%></td>
-					<td><%=dept.getBuy_fav_price()%></td>
-					<td><%=dept.getSell_fav_price()%></td>
-					<td><%=dept.getSum_price()%></td>
-					
-						<td style="display: none;"
-					 class="<%=dept.getStock_name()%>"><span id="pre<%=dept.getStock_name()%>"></span></td>
-				</tr>
-				
-				
-					
-				
-
-				
-
-				<%
-					}
-				%>
-
-
-			</table>
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Search">
+			<div class="input-group-btn">
+				<button class="btn btn-default" type="submit">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			</div>
 		</div>
 	</div>
+
+	</h2>
+
+
+	<div>
+		<table class="table table-bordered">
+
+			<tr>
+				<th>/</th>
+				<th>종목명</th>
+				<th>현재가</th>
+				<th>전일비</th>
+				<th>등락률</th>
+				<th>거래량</th>
+				<th>매수호가</th>
+				<th>매도호가</th>
+				<th>시가총액</th>
+
+
+			</tr>
+
+
+			<%
+				for (int i = 0; i < stocklist.size(); i++) {
+					stockDTO dept = stocklist.get(i);
+					count++;
+			%>
+
+			<tr class="title" onmouseover="idSet('<%=dept.getStock_name()%>')">
+				<td><%=count%></td>
+				<td><%=dept.getStock_name()%></td>
+				<td><%=dept.getCur_price()%></td>
+				<td><%=dept.getYesterday()%></td>
+				<td><%=dept.getChange_rate()%></td>
+				<td><%=dept.getTrade_val()%></td>
+				<td><%=dept.getBuy_fav_price()%></td>
+				<td><%=dept.getSell_fav_price()%></td>
+				<td><%=dept.getSum_price()%></td>
+
+				<td style="display: none;" class="<%=dept.getStock_name()%>"><span
+					id="pre<%=dept.getStock_name()%>"></span></td>
+			</tr>
+
+
+
+
+
+
+
+			<%
+				}
+			%>
+
+
+		</table>
+	</div>
+
 </body>
 </html>
