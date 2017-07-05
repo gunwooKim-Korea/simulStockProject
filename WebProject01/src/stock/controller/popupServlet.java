@@ -11,14 +11,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import stock.dto.buyDTO;
 import stock.dto.companyInfoDTO;
+import stock.dto.haveDTO;
 import stock.dto.stockDTO;
 import stock.service.stockService;
 import stock.service.stockServiceImpl;
 
 
-@WebServlet(name = "company_info", urlPatterns = { "/company_info.do" })
-public class companyInfoServlet extends HttpServlet {
+@WebServlet(name = "popup", urlPatterns = { "/popup.do" })
+public class popupServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -33,6 +35,12 @@ public class companyInfoServlet extends HttpServlet {
 		companyInfoDTO info = new companyInfoDTO();
 		stockService service = new stockServiceImpl();
 		info = service.companyInfo(Stock_name);
+		
+		buyDTO buy = new buyDTO("구매아이디", "종목코드", "구매날짜", "구매가격", "구매수량");
+		haveDTO have = new haveDTO("구매아이디", "종목코드", 1);
+		
+		int result = service.buyStock(buy);
+		int result2 = service.haveStock(have);
 		
 		
 		System.out.println(info.toString());

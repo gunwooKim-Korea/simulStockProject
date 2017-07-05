@@ -10,7 +10,11 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
 
+
+</script>
+	
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
@@ -26,6 +30,8 @@
 				<th>등락율</th>
 				<th>주식수</th>
 				<th>매수날짜</th>
+				<th>수량</th>
+				<th>매도하기</th>
 			</tr>
 			<tr>
 				<td><%="d" %></td>
@@ -34,6 +40,13 @@
 				<td>a</td>
 				<td>a</td>
 				<td>a</td>
+				<td><form method = "GET" action = "/WebProject01/sell.do?company_id=006360&mem_id=구매아이디">
+				<input type = "text" name = "val" width="7"/></td>
+				<td><input type='submit' value='매도하기'> </form>
+		
+						
+				</td>
+				
 			</tr>
 		</table>
 	</div>

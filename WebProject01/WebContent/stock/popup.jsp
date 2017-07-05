@@ -4,6 +4,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <script type="text/javascript">
@@ -23,37 +36,17 @@
 
 <h2>기업 정보</h2> 
 <table border="">
-			
-
-			<tr><td><%=info.getCeo_nm()%></td></tr>
-			<tr><td><%=info.getCrp_nm_e()%></td></tr>
-			<tr><td><%=info.getCrp_nm_i()%></td></tr>
-			<tr><td><%=info.getStock_cd()%></td></tr>
-			<tr><td><%=info.getCeo_nm()%></td></tr>
-			<tr><td><%=info.getCrp_cls()%></td></tr>
-			<tr><td><%=info.getCrp_no()%></td></tr>
-			<tr><td><%=info.getBsn_no()%></td></tr>
-			<tr><td><%=info.getAdr()%></td></tr>
-			<tr><td><%=info.getHm_url()%></td></tr>
-			<tr><td><%=info.getIr_url()%></td></tr>
-			<tr><td><%=info.getPhn_no()%></td></tr>
-			<tr><td><%=info.getFax_no()%></td></tr>
-			<tr><td><%=info.getInd_cd()%></td></tr>
-			<tr><td><%=info.getEst_dt()%></td></tr>	
-			<tr><td><%=info.getAcc_mt()%></td></tr>
-				
-				
-				
-				
-				
-				
-				
-
-
+		
+			<tr><td>정식명칭 </td><td><%=info.getCrp_nm()%></td></tr>
+			<tr><td>대표자명 </td><td><%=info.getCeo_nm()%></td></tr>
+			<tr><td>법인구분 </td><td><%=info.getCrp_cls()%></td></tr>
+			<tr><td>주소 </td><td><%=info.getAdr()%></td></tr>
+			<tr><td>홈페이지 </td><td><%=info.getHm_url()%></td></tr>
+			<tr><td>전화번호 </td><td><%=info.getPhn_no()%></td></tr>
+			<tr><td>팩스번호</td><td><%=info.getFax_no()%></td></tr>
+		
 		
 		</table>
-
-<h4>기업이름 : ${param.Stock_name}</h4>
 
 	<form name="checkform" method="post" action="/WebProject01/stock_popup.do">
 	수량:<input type="text" name="val" value="${param.Stock_name}">

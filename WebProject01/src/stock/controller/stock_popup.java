@@ -38,6 +38,7 @@ public class stock_popup extends HttpServlet {
 	
 		
 		buyDTO buy = new buyDTO("구매아이디", "종목코드", "구매날짜", "구매가격", "구매수량");
+		
 		stockService service = new stockServiceImpl();
 		int result = service.buyStock(buy);
 		System.out.println("buy"+buy.toString());

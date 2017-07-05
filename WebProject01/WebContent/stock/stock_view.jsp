@@ -51,7 +51,7 @@
 
 	function searchAddress() {
 
-		myopen = window.open("/WebProject01/company_info.do?Stock_name="
+		myopen = window.open("/WebProject01/popup.do?Stock_name="
 				+ Stock_name, "mywin", "width=400,height=500");
 
 	}

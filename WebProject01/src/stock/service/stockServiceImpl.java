@@ -6,6 +6,8 @@ import stock.dao.stockDAO;
 import stock.dao.stockDAOImpl;
 import stock.dto.buyDTO;
 import stock.dto.companyInfoDTO;
+import stock.dto.haveDTO;
+import stock.dto.sellDTO;
 import stock.dto.stockDTO;
 
 public class stockServiceImpl implements stockService {
@@ -32,7 +34,36 @@ public class stockServiceImpl implements stockService {
 	companyInfoDTO info = dao.companyInfo(Stock_name);
 	return info;
 	}
-	
+
+
+	@Override
+	public int haveStock(haveDTO have) {
+	int result =0;
+	stockDAO dao = new stockDAOImpl();
+	result = dao.haveStock(have);
+	return result;
+	}
+
+
+	@Override
+	public int search(String company_id, String mem_id) {
+		int result = 0;
+		stockDAO dao = new stockDAOImpl();
+		result = dao.search(company_id ,mem_id);
+		return result;
+	}
+
+
+	@Override
+	public int sellStock(sellDTO selldto) {
+		int result = 0;
+		stockDAO dao = new stockDAOImpl();
+		result = dao.sellStock(selldto);
+		return result;
+	}
+
+
+
 }
 
 
